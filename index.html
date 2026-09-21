@@ -1,14 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="A modern, high-performance HTML5 base project with vanilla CSS design system, interactive JavaScript, and Live Server integration.">
+  <meta name="author" content="Web Developer">
+  <title>LAB Web Development • Live Server Ready</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <!-- Ambient Gradient Background Lights -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-circle ambient-1" aria-hidden="true"></div>
+  <div class="ambient-circle ambient-2" aria-hidden="true"></div>
 
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="#" class="nav-brand" id="brandLogo">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <span>LAB Web Dev</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#guide" class="nav-link">Live Server</a></li>
+          <li><a href="#features" class="nav-link">Architecture</a></li>
+          <li><a href="#playground" class="nav-link">Playground</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="status-pill" id="liveServerStatus" title="Status of Live Server hot-reload server">
+            <span class="status-dot"></span>
+            <span id="statusText">Ready for Live Server</span>
+          </div>
+
+          <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="sunIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="moonIcon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-badge">
+        <span>⚡ HTML5 • Vanilla CSS • Live Server Configured</span>
+      </div>
+      <h1 class="hero-title">
+        The Perfect <span class="gradient-text">Base Foundation</span><br>
+        For Modern Web Projects
+      </h1>
+      <p class="hero-desc">
+        Clean semantic markup, a custom design system with CSS tokens, fluid responsive layout, and instant hot-reloading with VS Code Live Server.
+      </p>
+      <div class="hero-buttons">
+        <a href="#guide" class="btn btn-primary" id="btnLiveGuide">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Open with Live Server
+        </a>
+        <a href="#playground" class="btn btn-secondary" id="btnExploreTokens">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+          Explore Components
+        </a>
+      </div>
+    </section>
+
+    <!-- Live Server Quick-Start Banner -->
+    <section class="guide-banner" id="guide">
+      <div class="guide-content">
+        <h3>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          Live Server Extension Quick Start
+        </h3>
+        <p>Your workspace is pre-configured for Ritwick Dey's <strong>Live Server</strong> extension. Run it in seconds:</p>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <span class="step-number">1</span>
+            <span>Right-click <strong>index.html</strong></span>
+          </div>
+          <div class="guide-step">
+            <span class="step-number">2</span>
+            <span>Select <strong>"Open with Live Server"</strong></span>
+          </div>
+          <div class="guide-step">
+            <span class="step-number">3</span>
+            <span>Shortcut: <span class="kbd-badge">Alt + L, Alt + O</span></span>
+          </div>
+          <div class="guide-step">
+            <span class="step-number">4</span>
+            <span>Status Bar: Click <span class="kbd-badge">Go Live</span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="status-pill" style="font-size: 0.85rem; padding: 10px 18px;">
+          <span class="status-dot"></span> Port: 5500
+        </span>
+      </div>
+    </section>
+
+    <!-- Architecture & Features Section -->
+    <section id="features">
+      <div class="section-header">
+        <span class="section-tag">Base Architecture</span>
+        <h2 class="section-title">Built-In Production Standards</h2>
+        <p class="section-subtitle">Everything you need to write clean, maintainable web applications.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <article class="feature-card">
+          <div class="card-icon icon-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Clean Folder Structure</h3>
+          <p class="card-desc">
+            Organized into dedicated <code>css/</code>, <code>js/</code>, and root <code>index.html</code> files for modular development and easy scaling.
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card">
+          <div class="card-icon icon-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Live Server Hot Reload</h3>
+          <p class="card-desc">
+            Changes to your HTML, CSS, or JS reflect instantly in your browser without requiring manual page refreshes.
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card">
+          <div class="card-icon icon-emerald">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+              <line x1="16" y1="8" x2="2" y2="22"></line>
+              <line x1="17.5" y1="15" x2="9" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">CSS Design Tokens</h3>
+          <p class="card-desc">
+            Includes custom color palettes, glassmorphism, responsive font sizing, and dual dark/light mode themes via CSS custom properties.
+          </p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="feature-card">
+          <div class="card-icon icon-rose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-title">Modern Vanilla JS</h3>
+          <p class="card-desc">
+            Zero bloat, zero build steps. Fast, reactive JavaScript handling state, clipboard interactions, and theme persistence.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interactive Showcase / Playground -->
+    <section class="showcase-section" id="playground">
+      <div class="section-header">
+        <span class="section-tag">Interactive Preview</span>
+        <h2 class="section-title">Base Component Playground</h2>
+        <p class="section-subtitle">Test out responsive controls, reactive state, and the color palette token library.</p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- Interactive Counter Box -->
+        <div class="interactive-box">
+          <h4>State Counter Demo</h4>
+          <p>Click buttons to verify reactive DOM updates and transition animations.</p>
+          <div class="counter-widget">
+            <button class="counter-btn" id="btnDecrement" aria-label="Decrement value">−</button>
+            <span class="counter-value" id="counterValue">0</span>
+            <button class="counter-btn" id="btnIncrement" aria-label="Increment value">+</button>
+            <button class="counter-btn" id="btnReset" title="Reset counter" aria-label="Reset counter" style="font-size: 0.9rem;">↺</button>
+          </div>
+        </div>
+
+        <!-- Color Palette Swatches -->
+        <div class="interactive-box">
+          <h4>Design Tokens Palette</h4>
+          <p>Click any swatch below to copy its HEX code directly to your clipboard.</p>
+          <div class="palette-grid">
+            <div class="swatch" style="background: #6366f1;" data-color="#6366f1">
+              <span class="swatch-label">#6366f1</span>
+            </div>
+            <div class="swatch" style="background: #8b5cf6;" data-color="#8b5cf6">
+              <span class="swatch-label">#8b5cf6</span>
+            </div>
+            <div class="swatch" style="background: #06b6d4;" data-color="#06b6d4">
+              <span class="swatch-label">#06b6d4</span>
+            </div>
+            <div class="swatch" style="background: #10b981;" data-color="#10b981">
+              <span class="swatch-label">#10b981</span>
+            </div>
+            <div class="swatch" style="background: #f43f5e;" data-color="#f43f5e">
+              <span class="swatch-label">#f43f5e</span>
+            </div>
+            <div class="swatch" style="background: #f59e0b;" data-color="#f59e0b">
+              <span class="swatch-label">#f59e0b</span>
+            </div>
+            <div class="swatch" style="background: #0f172a;" data-color="#0f172a">
+              <span class="swatch-label">#0f172a</span>
+            </div>
+            <div class="swatch" style="background: #f8fafc; border: 1px solid #cbd5e1;" data-color="#f8fafc">
+              <span class="swatch-label" style="color: #0f172a; text-shadow: none;">#f8fafc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <aside class="toast" id="toastNotification" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
+      <path d="M20 6L9 17l-5-5"></path>
+    </svg>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </aside>
+
+  <!-- Semantic Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 ApexBase Project Template. Ready for VS Code Live Server.</p>
+      <ul class="footer-links">
+        <li><a href="#home">Back to Top</a></li>
+        <li><a href="#guide">Live Server Help</a></li>
+        <li><a href="#features">Architecture</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>

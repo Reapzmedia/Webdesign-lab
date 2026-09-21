@@ -1,7 +1,7 @@
 {
-  "name": "apex-base-project",
+  "name": "lab-web-development",
   "version": "1.0.0",
-  "description": "Modern HTML5 base project with design tokens, Live Server, Playwright, and static audit tools.",
+  "description": "LAB WEB Development - Modern HTML5 base project with design tokens, Live Server, Playwright, and static audit tools.",
   "scripts": {
     "playwright": "playwright",
     "test": "playwright test",

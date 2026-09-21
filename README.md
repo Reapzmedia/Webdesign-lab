@@ -1,4 +1,4 @@
-# ApexBase • Web Project Foundation & Tooling
+# LAB WEB Development
 
 A production-grade web project foundation equipped with **Live Server**, **Playwright CLI**, custom **Design Tokens**, and dedicated **AI Agent Skills** for design auditing, static code analysis, git workflows, and website engineering.
 
