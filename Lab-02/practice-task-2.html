@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 02 - Practice Task 2 (Form)</title>
+</head>
+<body>
+  <h2>Student Information Form</h2>
+  <form action="#" method="POST">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Enter first name" required><br><br>
+
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Enter last name" required><br><br>
+
+    <label for="city">City (Read Only):</label><br>
+    <input type="text" id="city" name="city" value="Islamabad" readonly required><br><br>
+
+    <label for="zipcode">Zip Code (Max 4 digits):</label><br>
+    <input type="text" id="zipcode" name="zipcode" maxlength="4" placeholder="4400" required><br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

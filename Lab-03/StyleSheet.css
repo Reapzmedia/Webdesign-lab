@@ -1,0 +1,33 @@
+* {
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+}
+
+h1, h3 {
+  color: green;
+  font-style: normal;
+}
+
+p.note {
+  font-size: 40px;
+  font-style: normal;
+  border-style: dotted;
+}
+
+li > h2 {
+  font-family: 'Courier New', monospace;
+  font-size: 40px;
+  color: blue;
+  font-style: italic;
+}
+
+div h3 {
+  font-family: Calibri, sans-serif;
+  color: red;
+  font-style: italic;
+}
+
+div + h1 {
+  border-style: dotted;
+  color: navy;
+}

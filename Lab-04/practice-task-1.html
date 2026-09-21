@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 04 - Practice Task 1 (Responsive Grid Layout)</title>
+  <!-- Bootstrap 4.5.2 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .layout-box {
+      background-color: #dcdfe6;
+      border: 1px solid #b3b8c2;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #2c3e50;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .header-box, .footer-box { height: 60px; }
+    .side-box { min-height: 350px; }
+    .box-1 { height: 100px; }
+    .box-mid { height: 90px; }
+    .box-bottom { height: 90px; }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <!-- Header -->
+    <div class="row">
+      <div class="col-12">
+        <div class="layout-box header-box">Header</div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="row">
+      <!-- Left Sidebar (Desktop only) -->
+      <div class="col-lg-2 d-none d-lg-block">
+        <div class="layout-box side-box">Left Side</div>
+      </div>
+
+      <!-- Center Main Grid -->
+      <div class="col-lg-8 col-12">
+        <!-- Box 1 -->
+        <div class="row">
+          <div class="col-12">
+            <div class="layout-box box-1">Box 1</div>
+          </div>
+        </div>
+
+        <!-- Boxes 2, 3, 4, 5 (4 columns on lg, 2 on md, 1 on xs) -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="layout-box box-mid">Box 2</div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="layout-box box-mid">Box 3</div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="layout-box box-mid">Box 4</div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="layout-box box-mid">Box 5</div>
+          </div>
+        </div>
+
+        <!-- Boxes 6 and 7 -->
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="layout-box box-bottom">Box 6</div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="layout-box box-bottom">Box 7</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar (Desktop only) -->
+      <div class="col-lg-2 d-none d-lg-block">
+        <div class="layout-box side-box">Right Side</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row">
+      <div class="col-12">
+        <div class="layout-box footer-box">Footer</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

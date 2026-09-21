@@ -1,0 +1,8 @@
+# System & OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor
+.vscode/*
+!.vscode/settings.json

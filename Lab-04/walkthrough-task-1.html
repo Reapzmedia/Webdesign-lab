@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 04 - Walkthrough Task 1 (Bootstrap Grid)</title>
+  <!-- Bootstrap 4.5.2 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .grid-box {
+      border: 1px solid #333;
+      padding: 20px;
+      text-align: center;
+      background-color: #f8f9fa;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .nested-box {
+      border: 1px solid #666;
+      background-color: #e9ecef;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <h2 class="text-center mb-4">Bootstrap Grid Walkthrough</h2>
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-lg-3">
+        <div class="grid-box">
+          <p>Col-lg-3</p>
+          <div class="row">
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Column -->
+      <div class="col-lg-6">
+        <div class="grid-box">
+          <p>Col-lg-6</p>
+          <div class="row">
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-3">
+        <div class="grid-box">
+          <p>Col-lg-3</p>
+          <div class="row">
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+            <div class="col-lg-4 nested-box">Col-lg-4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
