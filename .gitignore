@@ -1,0 +1,13 @@
+# Dependencies & Environments
+node_modules/
+.venv/
+.tools/
+
+# OS & Temp
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE & Editor
+.vscode/*
+!.vscode/settings.json
